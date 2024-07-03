@@ -10,7 +10,7 @@ import { FaGoogle } from "react-icons/fa";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const pathname = usePathname();
 
@@ -23,7 +23,7 @@ const Navbar = () => {
               type="button"
               id="mobile-dropdown-button"
               className="relative inline-flex items-center justify-center rounded-md p-2
-               text-gray-400 hover:bg-secondary-700 hover:text-white focus:outline-none
+               text-gray-400 hover:bg-secondary-700/30 hover:text-white focus:outline-none
                 focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
@@ -48,25 +48,25 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex flex-1 items-center justify-start ml-10 md:ml-0 md:items-stretch md:justify-start">
+          <div className="flex flex-1 items-center justify-start ml-16 md:ml-0 md:items-stretch md:justify-start">
             <Link className="flex flex-shrink-0 items-center " href="/">
-              <Image className="h-10 w-auto" src={logo} alt="PropertyPulse" />
+              <Image className="h-10 w-auto" src={logo} alt="NestQuest" />
             </Link>
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
                 <Link
                   href="/"
                   className={`${
-                    pathname === "/" ? "bg-primary-900" : ""
-                  } text-white hover:bg-secondary-900 hover:text-white rounded-md px-3 py-2`}
+                    pathname === "/" ? "bg-secondary-700" : ""
+                  } text-white hover:bg-secondary-700/30 hover:text-white rounded-md px-3 py-2`}
                 >
                   Home
                 </Link>
                 <Link
                   href="/properties"
                   className={`${
-                    pathname === "/properties" ? "bg-primary-900" : ""
-                  } text-white hover:bg-secondary-900 hover:text-white rounded-md px-3 py-2`}
+                    pathname === "/properties" ? "bg-secondary-700" : ""
+                  } text-white hover:bg-secondary-700/30 hover:text-white rounded-md px-3 py-2`}
                 >
                   Properties
                 </Link>
@@ -74,8 +74,8 @@ const Navbar = () => {
                   <Link
                     href="/properties/add"
                     className={`${
-                      pathname === "/properties/add" ? "bg-primary-900" : ""
-                    } text-white hover:bg-secondary-900 hover:text-white rounded-md px-3 py-2`}
+                      pathname === "/properties/add" ? "bg-secondary-700" : ""
+                    } text-white hover:bg-secondary-700/30 hover:text-white rounded-md px-3 py-2`}
                   >
                     Add Property
                   </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
           {!isLoggedIn && (
             <div className="hidden md:block md:ml-6">
               <div className="flex items-center">
-                <button className="flex items-center text-white bg-secondary-700 hover:bg-secondary-900 hover:text-white rounded-md px-3 py-2">
+                <button className="flex items-center text-white bg-secondary-700 hover:bg-secondary-700/30 hover:text-white rounded-md px-3 py-2">
                   <FaGoogle className="text-white mr-2" />
                   <span>Login or Register</span>
                 </button>
@@ -154,7 +154,7 @@ const Navbar = () => {
                   >
                     <Link
                       href="/profile"
-                      className="block px-4 py-2 text-sm text-white"
+                      className="block px-4 py-2 text-sm text-white hover:bg-primary-600 w-full text-left"
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-0"
@@ -163,7 +163,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       href="/properties/saved"
-                      className="block px-4 py-2 text-sm text-white"
+                      className="block px-4 py-2 text-sm text-white hover:bg-primary-600 w-full text-left"
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-2"
@@ -171,7 +171,7 @@ const Navbar = () => {
                       Saved Properties
                     </Link>
                     <button
-                      className="block px-4 py-2 text-sm text-white"
+                      className="block px-4 py-2 text-sm text-white hover:bg-primary-600 w-full text-left"
                       role="menuitem"
                       tabIndex={-1}
                       id="user-menu-item-2"
@@ -192,7 +192,7 @@ const Navbar = () => {
             <Link
               href="/"
               className={`${
-                pathname === "/" ? "bg-primary-900" : ""
+                pathname === "/" ? "bg-secondary-700" : ""
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
               Home
@@ -200,7 +200,7 @@ const Navbar = () => {
             <Link
               href="/properties"
               className={`${
-                pathname === "/properties" ? "bg-primary-900" : ""
+                pathname === "/properties" ? "bg-secondary-700" : ""
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
               Properties
@@ -209,7 +209,7 @@ const Navbar = () => {
               <Link
                 href="/properties/add"
                 className={`${
-                  pathname === "/properties/add" ? "bg-primary-900" : ""
+                  pathname === "/properties/add" ? "bg-secondary-700" : ""
                 } text-white block rounded-md px-3 py-2 text-base font-medium`}
               >
                 Add Property
@@ -217,7 +217,7 @@ const Navbar = () => {
             )}
 
             {!isLoggedIn && (
-              <button className="flex items-center text-white bg-secondary-700 hover:bg-secondary-900 hover:text-white rounded-md px-3 py-2 my-4">
+              <button className="flex items-center text-white bg-secondary-700 hover:bg-secondary-700/30 hover:text-white rounded-md px-3 py-2 my-4">
                 <span>Login or Register</span>
               </button>
             )}
