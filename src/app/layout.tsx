@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className=" bg-stone-100"}>
+      <body className={inter.className="bg-gradient-to-b from-stone-100 to-stone-400"}>
         <Navbar />
         {children}
         <Footer/>

@@ -10,7 +10,7 @@ const Hero = () => {
             Explore the estates to suit your needs.
           </p>
         </div>
-        <form className="mt-3 mx-auto max-w-2xl w-full flex flex-col md:flex-row items-center">
+        <form className="mt-3 mx-auto max-w-2xl w-full flex flex-col md:flex-row items-center mb-32">
           <div className="w-full md:w-3/5 md:pr-2 mb-4 md:mb-0">
             <label htmlFor="location" className="sr-only">
               Location
