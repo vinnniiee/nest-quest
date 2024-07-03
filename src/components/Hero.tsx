@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="bg-primary-700 py-20 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div className="text-center">
-          <h1 className="text-8xl text-left font-semibold text-white md:text-9xl mb-32">
+          <h1 className="text-8xl text-left font-semibold text-white md:text-9xl mt-16 mb-32">
             Find Your Perfect Nest.
           </h1>
           <p className="my-4 text-4xl   font-thin text-white">
